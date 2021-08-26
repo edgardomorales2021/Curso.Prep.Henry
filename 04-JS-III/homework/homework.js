@@ -160,6 +160,14 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var nuevoArray=[];
+  for (let i=0; i<array.length; i++){
+    if (array[i]==="Enero"||"Marzo"||"Noviembre")
+    nuevoArray.push (array[i])
+    if (nuevoArray.length<3) return "No se encontraron los meses pedidos";
+    
+  }
+  return nuevoArray;
 }
 
 
@@ -178,8 +186,17 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-   //var NuevoArray[]
-   return 0;
+  var array = [];
+  var valorSuma= numero;
+  for (let i=1; i<=10 ; i++){
+    valorSuma= valorSuma +2 // otra opcion valor +=2
+    if (valorSuma ===i){
+      break;
+    }
+    array.push (valorSuma);
+  }
+  if (i===10) return array;
+  return "Se interrumpió la ejecución";
 }
 
 
@@ -190,6 +207,14 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var nuevoValor= numero;
+  var arreglo = [];
+  for ( var i=1 ; i<= 10; i++){
+    if (i===5) continue;
+    nuevoValor +=2 // nuevoValor= nuevoValor+2
+    array.push (nuevoValor);
+  }
+  return array;
 }
 
 
