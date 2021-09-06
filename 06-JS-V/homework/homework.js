@@ -8,12 +8,25 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
+  function Usuario(opciones){
+    this.Usuario=opciones.Usuario;
+    this.nombre=opciones.nombre;
+    this.email=opciones.email;
+    this.password=opciones.password;
+  }
+  Usuario.prototype.saludar=function(){
+    return "Hola, mi nombre es "+ this.nombre;
+  } 06
+  return Usuario;
 }
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
+  Constructor.prototype.saludar= function(){
+    return 'Hello World!';
+  }
 }
 
 function agregarStringInvertida() {
@@ -22,6 +35,14 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
+  String.prototype.reverse= function(){
+    var stringInvertida=function();
+    for (var i=this.length-1; i>=0; i--){
+      stringInvertida=stringInvertida + this.charAt(i);
+    }
+    return stringInvertida;
+  }
+}
 }
 
 // ---------------------------------------------------------------------------//
@@ -36,9 +57,20 @@ function agregarStringInvertida() {
     //  }
 
   class Persona {
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
+    constructor(nombre, apellido,edad, domicilio) {
       // Crea el constructor:
-
+      this.nombre: 'Juan',
+      this.apellido:'Perez',
+      this.edad: 22,
+      this.domicilio:'Saavedra 123',
+      this.detalle= function(){
+        return{
+          Nombre: this.Nombre,
+          Apellido:this.apellido,
+          Edad: this.edad,
+          Domicilio: this. domicilio,
+        }
+      }
     }
 }
 
@@ -51,6 +83,9 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
+  Persona.prototype.datos= function(){
+    return this.nombre + "," this.edad +"años";
+  }
 }
   
 
