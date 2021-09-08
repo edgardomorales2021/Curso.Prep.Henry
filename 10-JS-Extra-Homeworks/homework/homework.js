@@ -10,22 +10,47 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  var array=[];
+  for(var prop in objeto){
+    array.push([prop,objeto[prop]]);
+  }
+  return array;
 }
-
-
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  var obj={};
+  for(var i=o; i<string.length; i++){
+    var cont=0;
+    if(!obj[string[i]]){
+      for(var j=0; j<string.length; j++){
+        if(string[i]===string[j]){
+          cont++;
+        }
+      }
+    obj[string[i]]=cont;
+    }
+  }
+  return obj;
 }
-
 
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var texMax=" ";
+  var texMin=" ";
+  for(var i=0; i<s.length; i++){
+    if(s[0]===s[i].toUpperCase()){
+      texMax=texMax+s[i];
+    } else{
+     texMin=texMin+s[i];
+    }
+  }
+  return texMax+texMin;
 }
 
 
