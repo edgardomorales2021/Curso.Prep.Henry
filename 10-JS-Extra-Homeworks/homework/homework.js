@@ -41,14 +41,13 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
-  var texMax=" ";
-  var texMin=" ";
+  var texMax="";
+  var texMin="";
   for(var i=0; i<s.length; i++){
     if(s[0]===s[i].toUpperCase()){
       texMax=texMax+s[i];
     } else{
      texMin=texMin+s[i];
-    }
   }
   return texMax+texMin;
 }
